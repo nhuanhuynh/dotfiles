@@ -1,0 +1,11 @@
+# History files (do not sync command history)
+.bash_history
+.zsh_history
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Neovim
+nvim/plugin/packer_compiled.lua

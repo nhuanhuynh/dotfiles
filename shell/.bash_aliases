@@ -1,0 +1,6 @@
+alias   cd='cd_func() { builtin cd "$@" && ll; }; cd_func'
+alias   yocto='cd /home/allan/working/yocto/build'
+alias   st='cd /mnt/windows_data/ubuntu/st'
+alias   oag='cd ~/agy_workspace'
+alias   update='sudo apt update && sudo apt upgrade'
+alias   onv='cd ~/.config/nvim/'
