@@ -9,3 +9,5 @@
 
 # Neovim
 nvim/plugin/packer_compiled.lua
+.zshrc.local
+.bashrc.local

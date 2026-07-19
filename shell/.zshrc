@@ -130,3 +130,8 @@ export PATH="/home/allan/.local/bin:$PATH"
 # show_dashboard
 # neofetch
 
+
+# Load local secrets (not committed to git)
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
