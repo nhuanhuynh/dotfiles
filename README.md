@@ -2,6 +2,8 @@
 
 Personal configuration files for Ubuntu development environment.
 
+![Setup Demo](setup-demo.png)
+
 ## 📋 Contents
 
 - **🪟 nvim/** — Neovim configuration (lazy.nvim, LSP, treesitter)
