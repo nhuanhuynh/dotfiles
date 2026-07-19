@@ -39,3 +39,34 @@ The script will backup existing configs and create symlinks.
 - Neovim requires: nodejs, ripgrep, fd
 - Secrets in `~/.zshrc.local` are automatically sourced and not committed to git
 
+
+## ✏️ Updating Configs
+
+Since all configs are symlinked from the dotfiles directory, you can edit them directly:
+
+```bash
+# Edit Neovim config
+nano ~/dotfiles/nvim/init.lua
+
+# Edit shell config
+nano ~/dotfiles/shell/.zshrc
+
+# Edit WezTerm config
+nano ~/dotfiles/wezterm/wezterm.lua
+
+# Edit Tmux config
+nano ~/dotfiles/tmux/.tmux.conf
+nano ~/dotfiles/tmux/.tmux.conf.local
+```
+
+After editing, commit and push to GitHub:
+
+```bash
+cd ~/dotfiles
+git add .
+git commit -m "Update config: describe your changes"
+git push
+```
+
+The changes take effect immediately (no reload needed for most configs).
+

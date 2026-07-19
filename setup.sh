@@ -4,6 +4,32 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles_backup_$(date +%Y%m%d_%H%M%S)"
 
+# Check dependencies
+echo "🔍 Checking dependencies..."
+MISSING=()
+for cmd in git zsh tmux nvim wezterm; do
+    if ! command -v "$cmd" &> /dev/null; then
+        MISSING+=("$cmd")
+        echo "  ❌ Missing: $cmd"
+    else
+        echo "  ✓ Found: $cmd"
+    fi
+done
+
+if [ ${#MISSING[@]} -gt 0 ]; then
+    echo ""
+    echo "⚠️  Missing dependencies. Install them:"
+    echo ""
+    echo "On Ubuntu/Debian:"
+    echo "  sudo apt update"
+    echo "  sudo apt install ${MISSING[@]}"
+    echo ""
+    echo "Then run this script again."
+    exit 1
+fi
+
+echo ""
+
 link() {
     local src="$1"
     local dst="$2"
