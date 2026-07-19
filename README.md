@@ -46,17 +46,17 @@ Since all configs are symlinked from the dotfiles directory, you can edit them d
 
 ```bash
 # Edit Neovim config
-nano ~/dotfiles/nvim/init.lua
+nvim ~/dotfiles/nvim/init.lua
 
 # Edit shell config
-nano ~/dotfiles/shell/.zshrc
+nvim ~/dotfiles/shell/.zshrc
 
 # Edit WezTerm config
-nano ~/dotfiles/wezterm/wezterm.lua
+nvim ~/dotfiles/wezterm/wezterm.lua
 
 # Edit Tmux config
-nano ~/dotfiles/tmux/.tmux.conf
-nano ~/dotfiles/tmux/.tmux.conf.local
+nvim ~/dotfiles/tmux/.tmux.conf
+nvim ~/dotfiles/tmux/.tmux.conf.local
 ```
 
 After editing, commit and push to GitHub:
